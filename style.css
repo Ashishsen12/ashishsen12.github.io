@@ -16,7 +16,66 @@
     --transition-smooth: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
     --card-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
 }
+/* CONTACT DETAILS SECTION */
+.contact-info {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-bottom: 40px;
+    padding:0px 170px;
+}
 
+.contact-card {
+    padding: 25px;
+    text-align: center;
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--border-glass);
+    backdrop-filter: blur(10px);
+    transition: 0.3s ease;
+}
+
+.contact-card i {
+    font-size: 28px;
+    color: var(--primary);
+    margin-bottom: 15px;
+}
+
+.contact-card h4 {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+.contact-card p {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin: 0;
+}
+
+/* HOVER EFFECT */
+.contact-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+/* LINK STYLE */
+.contact-card a {
+    color: var(--text-muted);
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.contact-card a:hover {
+    color: var(--primary);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .contact-info {
+        grid-template-columns: 1fr;
+        padding:0px 10px;
+    }
+}
 .floating-icons {
     position: fixed;
     bottom: 20px;
